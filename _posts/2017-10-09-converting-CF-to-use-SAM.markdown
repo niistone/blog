@@ -129,7 +129,7 @@ Bonus...
 ### Tricky things/the errors that that you googled that brought you here
 
 #### invalid function ARN/Cross-account pass role is not allowed
-These errors occur when the ARN in your swagger template is invalid. Don't read into the cross-account error too much, its just telling you that the account id being used is wrong. You can't (as of the time this is posted) pass `Account ID` and `Region` as stage variables to the swagger template (through the [AWS::Serverless::Api][AWS::Serverless::Api] `Variables` property. As far as I can see, you will have to settle for hardcoded values in your swagger template. If you plan on hosting your swagger template statically in an s3 bucket (so not including it in the package -> deploy process) you will be able to use a somewhat convoluted process to [transform external snippets][transform external snippets] from your CloudFormation template. 
+These errors occur when the ARN in your swagger template is invalid. Don't read into the cross-account error too much, its just telling you that the account id being used is wrong. You can't (as of the time this is posted) pass `Account ID` and `Region` as stage variables to the swagger template (through the [AWS::Serverless::Api][AWS::Serverless::Api] `Variables` property. As far as I can see, you will have to settle for hardcoded values in your swagger template. 
 
 
 [intro]: https://github.com/awslabs/serverless-application-model
